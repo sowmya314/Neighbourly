@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neighbourly</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/images/favicon.png" type="image/png">
+
+  </head>
+  <body id="elderly-bg">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <div class="flash-{{category}}">    
+                    {{ msg }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}    
+    <a href="{{url_for('logout')}}"><img id="logout" src="../static/images/logout.png"></a>
+
+    <div id="elderlypage">
+        <h1>NEED AN ERRAND?</h1>
+        <p>Submit a request for your task! Our team of volunteers 
+            will assist you as soon as possible.</p>
+        <form method="POST" action="{{ url_for('elderly') }}">
+            <textarea required id="elderly-task" name="task" placeholder="Describe your request here..."></textarea> <br>
+            <div id="date">
+                <label for="date" required>Date:</label>
+                <input type="datetime-local" required name="date"> <br> <br>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <p><a href="{{url_for('sent_requests')}}">View current and previous errands</a></p>
+    </div>
+
+    
+  </body>
+</html>

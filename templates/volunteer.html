@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neighbourly</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/images/favicon.png" type="image/png">
+
+  </head>
+  <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <div class="flash-{{category}}">    
+                    {{ msg }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}   
+    <div id="volunteerpage">
+        <h1>VOLUNTEER PAGE</h1>
+        <a href="{{url_for('logout')}}"><img id="logout" src="../static/images/logout.png"></a>
+        <div id="volunteer-display">
+            <div class="task heading"><p>TASK DESCRIPTION</p></div>
+            <div class="date heading"><p>DATE</p></div>
+            <div class="email heading"><p>CONTACT</p></div>
+        </div>
+        
+        <br>
+        {% for item in accepted_items %}
+            <div id="volunteer-display">
+                <div class="task accepted">
+                    <p>{{item['task']}}</p>
+                    <p>Address: {{item['address']}}</p>
+                </div>
+                <div class="date accepted"><p>{{item['date']}}</p></div>
+                <div class="email accepted"><p><a target="_blank" href="https://mail.google.com/mail/?view=cm&to={{item['email']}}">{{item['elderly-name']}}</a></p></div>
+                <div class="accept accepted"><p><a href="{{ url_for('remove', task_id=item['_id']) }}">✅</a></p></div>
+            </div>
+            <br>
+        {% endfor %}
+
+        {% for item in items %}
+            <div id="volunteer-display">
+                <div class="task open">
+                    <p>{{item['task']}}</p>
+                    <p>Address: {{item['address']}}</p>
+                </div>
+                <div class="date open"><p>{{item['date']}}</p></div>
+                <div class="email open"><p><a target="_blank" href="https://mail.google.com/mail/?view=cm&to={{item['email']}}">{{item['elderly-name']}}</a></p></div>
+                <div class="accept open"><p><a href="{{ url_for('accept', task_id=item['_id']) }}">⬜</a></p></div>
+            </div>
+            <br>
+        {% endfor %}
+
+        {% for item in completed_items %}
+            <div id="volunteer-display">
+                <div class="task complete">
+                    <p>{{item['task']}}</p>
+                    <p>Address: {{item['address']}}</p>
+                </div>
+                <div class="date complete"><p>{{item['date']}}</p></div>
+                <div class="email complete"><p><a target="_blank" href="https://mail.google.com/mail/?view=cm&to={{item['email']}}">{{item['elderly-name']}}</a></p></div>
+                <div class="accept complete"><p>✅</p></div>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+
+    
+  </body>
+</html>

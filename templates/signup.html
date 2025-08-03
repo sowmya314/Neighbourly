@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neighbourly</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/images/favicon.png" type="image/png">
+
+  </head>
+  <body>    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <div class="flash-{{category}}">    
+                    {{ msg }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}    
+    <div id="signup">
+        <h1>Create an Account</h1>
+         <form form method="POST" action="{{ url_for('signup') }}">
+            <input required type="text" id="email" name="email" placeholder="Email"><br>
+            <input required type="text" id="name" name="name" placeholder="Name"><br>
+            <input required type="password" id="password" name="password" placeholder="Password"><br>
+            <input required type="text" id="address" name="address" placeholder="Address">
+              <div id="age-form">
+                <p id="age-form-p">Role:</p>
+                <input type="radio" id="elderly" name="age" value="Elderly">
+                <label for="elderly">Elderly</label>
+                <input type="radio" id="volunteer" name="age" value="Volunteer">
+                <label for="Volunteer">Volunteer</label>
+            </div>
+            <input type="submit" value="Submit">
+
+        </form>
+        <p>Already have an account? <a href="{{url_for('login')}}">Login here!</a></p> 
+    </div>
+
+    
+  </body>
+</html>

@@ -1,0 +1,287 @@
+body, html {
+    background-color: lavender;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+}
+
+#homepage {
+    width: 50%;
+    background-color: white;
+    color: rgb(129, 129, 166);
+    margin: auto;
+    position: relative;
+    top: 25%;
+    border-radius: 10px;
+    border: 3px rgb(129, 129, 166) solid;
+}
+
+#homepage-a {
+    all: unset;
+}
+h1 {
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+p {
+    font-weight: 100;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20pt;
+    color: rgb(112, 112, 135);
+    text-align: center;
+}
+
+button, input[type="submit"] {
+    display: block;
+    box-sizing: border-box;
+    width: 94%;
+    margin: auto;
+    background-color: rgb(129, 129, 166);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: white;
+}
+
+
+
+button:hover, input[type="submit"]:hover {
+    background-color: rgb(152, 152, 174);
+
+}
+
+form {
+    font-size: 20px;
+}
+
+#login {
+    width: 30%;
+    background-color: white;
+    color: rgb(129, 129, 166);
+    margin: auto;
+    position: relative;
+    top: 15%;
+    border-radius: 10px;
+    border: 3px rgb(129, 129, 166) solid;
+}
+
+#signup {
+    width: 30%;
+    background-color: white;
+    color: rgb(129, 129, 166);
+    margin: auto;
+    position: relative;
+    top: 10%;
+    border-radius: 10px;
+    border: 3px rgb(129, 129, 166) solid;
+}
+
+form {
+    width: 100%;
+}
+
+input[type="text"], input[type="password"] {
+    box-sizing: border-box;
+    display: block;
+    height: 50px;
+    width: 94%;
+    padding-left: 10px;
+    margin: auto;
+}
+
+#age-form-p {
+    text-align: left;
+    font-size: 25px;
+    padding-left: 10;
+    margin-left: 0;
+}
+
+#age-form {
+    width: 100%;
+    text-align: center;
+}
+
+#age-form-p {
+    display: inline-block;
+}
+
+#elderlypage {
+    width: 30%;
+    background-color: white;
+    color: rgb(129, 129, 166);
+    margin: auto;
+    position: relative;
+    top: 15%;
+    border-radius: 10px;
+    border: 3px rgb(129, 129, 166) solid;
+}
+
+h1 {
+    color: rgb(129, 129, 166);
+}
+
+p {
+    font-weight: 100;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15pt;
+    color: rgb(112, 112, 135);
+    text-align: center;
+}
+
+input[type="datetime-local"] {
+    
+}
+
+#elderly-task {
+    display: block;
+    padding-left: 10px;
+    width: 90%;
+    height: 120px;
+    resize: none;
+    margin: auto;
+}
+
+
+h1 {
+    color: rgb(129, 129, 166);
+}
+
+#elderly-bg {
+  background-image: url('../images/D9B3EA84-E537-47BC-996F-74D5B9A40F21.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flash-info {
+    padding: 1.5rem;
+    margin: auto;
+    background-color: rgb(189, 223, 189);
+    position: relative;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    width: 60%;
+}
+
+.flash-error {
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    background-color: rgb(223, 189, 189);
+    position: relative;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    width: 60%;
+}
+
+#volunteer-display {
+    color: white;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+
+.task {
+    width: 59%;
+}
+
+.date {
+    width: 22%;
+}
+
+.email {
+    width: 10%;
+}
+
+.accept {
+    width: 5%;
+}
+
+.elderly .task {
+    width: 50%;
+}
+
+.elderly .date {
+    width: 25%;
+}
+
+.elderly .email {
+    width: 25%;
+}
+
+.task, .date, .email, .accept {
+    background-color: rgb(112, 112, 135);
+    height: 110px;
+    gap: 30px;
+}
+
+.elderly .task, .elderly .date, .elderly .email, .elderly .accept {
+    height: 70px;
+}
+
+.task > p, .date > p, .email > p > a, .email > p {
+    color: white;
+    vertical-align:middle;
+}
+
+.task > p {
+    text-align: left;
+}
+
+.heading > p {
+    font-weight: bold;
+}
+
+.accepted {
+    background-color: rgb(112, 135, 126);
+
+}
+
+.open {
+    background-color:#ad9d49;
+}
+
+.complete {
+    background-color: grey;
+}
+
+.complete > p {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    text-decoration-thickness: 3px;
+}
+
+#logout {
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.heading {
+    height: 70px;
+}
+
+#date {
+    width: fit-content;
+    margin:auto;
+}
+
+.elderly .task.heading {
+    width: 50%;
+}
+
+.elderly .heading.accept {
+    background-color: lavender;
+}
