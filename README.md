@@ -1,3 +1,4 @@
+# Neighbourly
 ## Inspiration 🌟
 With many elderly neighbours in our community, we often witness the everyday challenges that they face, especially when it is pertaining to small but necessary tasks like grocery shopping, taking out the trash, or carrying heavy items. Many seniors feel hesitant to ask for help, while simultaneously, others in the community are eager to volunteer and help out. We were inspired by these daily occurrences to create _Neighbourly_, a simple, accessible platform to bridge this gap and nurture a strong and connected community. 
 
